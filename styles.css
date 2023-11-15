@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+
+body, html {
+	height: 100%;
+	margin: 0;
+	font-family: 'Caveat', cursive;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 15px;
+	text-align: center;
+}
+
+article {
+	padding: 5%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+section {
+	margin: 10px;
+	padding: 0 10px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px dotted green;
+}
+
+section > div {
+	border: 1px solid green;
+	padding: 10px;
+	width: 100%;
+}
+
+section * {
+	font-size: 1.5em;
+	margin: 2px;
+}
+
+#template {
+	display: none;
+}
+
+input {
+	color: #7e7e7e;
+	text-align: center;
+	width: 50%;
+	border: none;
+}
+input:hover {
+	color: #333333;
+}
+
+.phrase:before {
+	content: '"';
+}
+.phrase:after {
+	content: '"';
+}
+.phrase:hover {
+	background-color: #d2d2d2;
+}
+
+.shortKey .toucher {
+	background-color: #d2d2d2;
+	border-radius: 25%;
+	padding: 10px;
+	margin: 10px;
+	font-family: 'Caveat', cursive;
+}
+
+.toucher {
+	display: none;
+}
+
+.unused {
+	text-decoration: underline;
+}
+.unused:before {
+	content: "??";
+}
+
+.delete {
+	background-color: red;
+	color: white;
+	border-radius: 25%;
+	font-weight: bold;
+	padding: 10px;
+	margin: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+	article {
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	}
+
+	section > div {
+		padding: 0;
+		min-height: 100%;
+		display: grid;
+	}
+
+	section * {
+		font-size: 1em;
+	}
+
+	input {
+		width: 20%;
+	}
+
+	.shortKey {
+		display: none;
+	}
+
+	.toucher {
+		display: inline;
+		width: 100%;
+		height: 100%;
+	}
+
+	.delete {
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		background-color: #880000;
+		border-radius: 0;
+	}
+}
